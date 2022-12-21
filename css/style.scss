@@ -1,0 +1,2533 @@
+$color_1: #111111;
+$color_2: #1D8DDE;
+$color_3: grey;
+$color_4: black;
+$color_5: #262626;
+$color_6: #fff;
+$color_7: #333;
+$color_8: #666;
+$color_9: #E91E63;
+$font-family_1: "Poppins", sans-serif;
+$background-color_1: #FAF0E6;
+$background-color_2: rgba(224, 193, 162, 0.25);
+$background-color_3: rgba(224, 193, 162, 0.5);
+$background-color_4: #E0C1A2;
+
+/* loading screen */
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-color_1;
+	transition: opacity 3s,visibility 3s;
+  }
+  
+  .loader-hidden{
+	opacity: 0;
+	visibility: hidden;
+  }
+  
+  .loader::after{
+	content: "";
+	width: 75px;
+	height: 75px;
+	border: 15px solid #F3E4D5;
+	border-top-color: $color_2;
+	border-radius: 50%;
+	animation: loading 1.5s ease infinite;
+  }
+  
+  @keyframes loading {
+	from{
+	  transform: rotate(0turn);
+	}
+	to{
+	  transform: rotate(3turn);
+	}
+  }
+  
+  body {
+	  width: 100vw;
+	  height: 100vh;
+	  background: $background-color_1;
+	  margin: 0px;
+	  padding: 0px;
+	  overflow-x: hidden;
+	}
+	
+	.topNavBar {
+	  position: relative;
+	  top: 16px;
+	  width: 100vw;
+	  height: 100px;
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	  gap: 11%; 
+	}
+	.topNavBar img {
+	  border-radius: 50%;
+	  margin-left: 10%;
+	}
+	
+	.mainContent {
+	  position: relative;
+	  margin-bottom: 20px;
+	}
+	
+	.contents {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  justify-content: center;
+	  column-gap: 71px;
+	  font-family: $font-family_1;
+	  font-weight: normal;
+	}
+  
+	.contents span{
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	  gap: 10px;
+	  font-size: 13px;
+	}
+  
+	.contents span a{
+	  color: $color_1;
+	  text-decoration: none;
+	  display: flex;
+	  align-items: center;
+	  flex-direction: row;
+	  gap: 10px;
+	}
+  
+	.contents span:first-child {
+	  font-weight: bold;
+	}
+	
+	.greetings {
+	  margin-left: 5%;
+	  margin-top: 5%;
+	}
+	.greetings span {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 50%;
+	}
+	
+	.socials {
+	  position: absolute;
+	  right: -162px;
+	  top: 175px;
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  transform: rotate(90deg);
+	  gap: 30px;
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	}
+	.socials a {
+	  transform: rotate(270deg);
+	}
+	
+	.line {
+	  width: 128px;
+	  height: 0px;
+	  border: 7px solid $color_2;
+	  background-color: $color_2;
+	}
+	
+	.nameAndWork {
+	  margin-left: 5%;
+	  margin-top: 2%;
+	}
+	.nameAndWork h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 42.67px;
+	  letter-spacing: -0.02em;
+	  -webkit-margin-after: 0px;
+			  margin-block-end: 0px;
+	}
+	.nameAndWork h3 span:nth-child(2) {
+	  color: $color_2;
+	}
+	.nameAndWork h4 {
+	  font-family: $font-family_1;
+	  font-weight: normal;
+	  font-size: 16px;
+	  -webkit-margin-before: 0.5em;
+			  margin-block-start: 0.5em;
+	  margin-left: 2px;
+	}
+	.nameAndWork .line {
+	  margin-left: 3px;
+	}
+	
+	.quote {
+	  margin-left: 5%;
+	  margin-top: 5%;
+	}
+	.quote h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 20px;
+	  letter-spacing: -0.02em;
+	  color: $color_3;
+	  -webkit-margin-after: 0.25em;
+			  margin-block-end: 0.25em;
+	}
+	.quote span {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 20px;
+	  letter-spacing: -0.02em;
+	}
+	
+	.photo {
+	  position: absolute;
+	  right: 214px;
+	  top: 65px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	.photo img {
+	  width: 386px;
+	  height: 386px;
+	}
+  
+	#aboutMeName{
+	  width: 100vw;
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 0.5;
+	  line-height: 0px;
+	  display: flex;
+	  justify-content: center;
+	  margin-bottom: -70px;
+	}
+  
+	.aboutMe{
+	  width: 100vw;
+	  height: 750px;
+	  background-color:$background-color_2;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+	.aboutMeContainer img{
+	  width: 255px;
+	  border: 12px solid #F3E4D5;
+	}
+  
+	.image{
+	  position: relative;
+	  width: 255px;
+	  height: 298px;  
+	  margin-left: 100px;
+	}
+	
+	.image::after{
+	  content: "";
+	  position: absolute;
+	  left: -33px;
+	  top: 30px;
+	  width: 101%;
+	  height: 101%;
+	  border: 7px solid $color_2;
+	  z-index: -1;
+	}
+  
+	.aboutMeText{
+	  width: 50vw;
+	  height: 375px;
+	  padding: 50px;
+	  font-family: $font-family_1; 
+	  background-color:$background-color_3;
+	  z-index: -1;
+	  display: flex;
+	  align-items: center;
+	}
+  
+	.aboutMeText h3{
+	  text-indent: 25px;
+	}
+  
+	.aboutMeText li{
+	  font-weight: 400;
+	  font-size: 20px;
+	}
+  
+	#whatIDoName {
+	  position: relative;
+	  top: 0px;
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 25px;
+	  line-height: 0px;
+	  margin-top: -68px;
+	}
+	#whatIDoName h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 0.5;
+	}
+	
+	.whatIDo {
+	  margin-top: -60px;
+	  padding: 0px;
+	  width: 100vw;
+	  height: 552px;
+	  background-color: $background-color_4;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	.whatIDoList {
+	  width: 1199.57px;
+	  height: 224.19px;
+	  padding: 0px;
+	  gap: 101px;
+	  display: flex;
+	  flex-direction: row;
+	  align-items: flex-start;
+	  z-index: 1;
+	}
+	
+	.list {
+	  padding: 33px 11px;
+	  gap: 27px;
+	  border-radius: 22.59px;
+	  width: 224px;
+	  height: 168px;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  text-align: center;
+	  background: $background-color_1;
+	}
+	.list img {
+	  width: 95px;
+	  height: 95px;
+	}
+	.list h4 {
+	  font-family: $font-family_1;
+	  font-weight: normal;
+	  font-size: 16px;
+	}
+	
+	.design {
+	  position: absolute;
+	  width: 986px;
+	  height: 986px;
+	  margin-left: -21%;
+	  margin-top: -18%;
+	}
+	
+	.dashedRectangle {
+	  width: 70%;
+	  height: 70%;
+	  border: 5px dashed $color_2;
+	  border-radius: 100px;
+	  transform: rotate(45deg);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	.rectangle {
+	  width: 91%;
+	  height: 91%;
+	  background: #EEEEEE;
+	  border-radius: 100px;
+	}
+	
+	#skillsName {
+	  position: relative;
+	  margin-top: -69px;
+	  width: 100%;
+	  height: 200px;
+	  display: flex;
+	  justify-content: center;
+	  line-height: 0px;
+	}
+	#skillsName h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 0.5;
+	}
+	
+	.skills {
+	  position: absolute;
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  margin-top: -43px;
+	}
+	
+	.skillsList {
+	  display: flex;
+	  flex-direction: column;
+	  padding: 19px 0px;
+	  gap: 21px;
+	  width: 706px;
+	  height: 416px;
+	}
+	
+	.list2 {
+	  font-family: $font-family_1;
+	  font-weight: normal;
+	  display: flex;
+	  align-items: center;
+	  letter-spacing: -0.02em;
+	  width: 706px;
+	  height: 36px;
+	}
+	
+	.HTML {
+	  width: 232.5px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.CSS {
+	  width: 279px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.JavaScript {
+	  width: 46.5px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.Python {
+	  width: 302.25px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.C {
+	  width: 325.5px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.PowerPoint {
+	  width: 348.75px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.Tableau {
+	  width: 162.75px;
+	  height: 18px;
+	  background: $color_2;
+	  border-radius: 50px;
+	}
+	
+	.common-line {
+	  position: absolute;
+	  width: 465px;
+	  height: 18px;
+	  background: #000000;
+	  border-radius: 50px;
+	  margin-left: 173px;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	
+	#recentWorksName {
+	  position: relative;
+	  margin-top: 420px;
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  line-height: 0px;
+	}
+	#recentWorksName h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 0.5;
+	}
+
+	  .recentWorks {
+		margin-top: -60px;
+		width: 100%;
+		height: 900px;
+		background-color: #E0C1A2;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+	  }
+	  .recentWorks .worksItem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: $background-color_1;
+		border-radius: 2rem;
+		margin: 1rem;
+		width: 40vw;
+		height: 600px;
+	  }
+	  .recentWorks .worksItem .worksImg {
+		width: 20vw;
+		height: 40vh;
+		padding: 2rem;
+	  }
+	  .recentWorks .worksItem .worksImg img {
+		border-radius: 2rem;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		   object-fit: cover;
+	  }
+	  .recentWorks .worksItem .worksImg img:hover {
+		transform: scale(1.1);
+		transition: 0.5s;
+	  }
+	  .recentWorks .worksItem .worksInfo {
+		padding: 2rem;
+	  }
+	  .recentWorks .worksItem .worksInfo p {
+		font-size: 1rem;
+		margin: 0 0 2rem 0;
+		color: black;
+		text-align: justify;
+		font-family: 'Poppins', sans-serif;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(2) {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+		padding: 0.5rem 1rem;
+		border: 1px solid #00ADB5;
+		border-radius: 5px;
+		color: #00ADB5;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(2):hover {
+		background-color: #00ADB5;
+		color: #EEEEEE;
+		transition: all 0.3s ease-in-out;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(3) {
+		font-size: 1rem;
+		margin: 0rem 0rem 1rem 2rem;
+		padding: 0.5rem 1rem;
+		border: 1px solid #00ADB5;
+		border-radius: 5px;
+		background-color: #00ADB5;
+		color: #EEEEEE;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(3):hover {
+		background-color: #222831;
+		color: #00ADB5;
+		transition: all 0.3s ease-in-out;
+	  }
+	  .recentWorks .worksItem:hover {
+		transition: 0.9s;
+		box-shadow: -12px 12px 2px -1px rgba(1, 5, 7, 0.2);
+	  }
+	
+	#footer {
+	  width: 100%;
+	  height: 456px;
+	  background: $color_2;
+	  display: flex;
+	  justify-content: space-around;
+	  overflow: hidden;
+	}
+  
+	.copyright{
+	  margin: 0px;
+	  padding: 0px;
+	  width: 100vw;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background: $color_2;
+	  font-family: $font-family_1;
+	}
+	
+	.footerDesign {
+	  width: 456px;
+	  height: 456px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
+	.footerDashedRectangle {
+	  width: 80%;
+	  height: 80%;
+	  border: 5px dashed $color_1;
+	  border-radius: 100px;
+	  transform: rotate(45deg);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	.footerRectangle {
+	  width: 91%;
+	  height: 91%;
+	  background: #EEEEEE;
+	  border-radius: 100px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	.contacts {
+	  position: absolute;
+	  width: 250px;
+	  height: 250px;
+	  transform: rotate(-45deg);
+	}
+	.contacts h2 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  display: flex;
+	  justify-content: center;
+	}
+	
+	.list4 {
+	  display: flex;
+	  flex-direction: row;
+	  gap: 15px;
+	}
+	.list4 img {
+	  width: 27px;
+	  height: 27px;
+	}
+	.list4 h3 {
+	  font-size: 16px;
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  -webkit-margin-before: 0em;
+			  margin-block-start: 0em;
+	  -webkit-margin-after: 1.5em;
+			  margin-block-end: 1.5em;
+	}
+	.list4 h3 span {
+	  font-weight: normal;
+	}
+  
+	#servicesName {
+	  position: relative;
+	  margin-top: -68px;
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  line-height: 0px;
+	}
+	#servicesName h3 {
+	  font-family: $font-family_1;
+	  font-weight: bold;
+	  font-size: 64px;
+	  letter-spacing: -0.02em;
+	  opacity: 0.5;
+	}
+  
+	.body-container-services{
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  margin: 50px 0px 75px 0px;
+	}
+  
+	.services{
+	  width: 1170px;
+	  display: flex;
+	  justify-content: space-between;
+	}
+  
+	.single-service{
+	  position: relative;
+	  width: 31%;
+	  height: 320px;
+	  background: $color_6;
+	  box-sizing: border-box;
+	  padding: 0 15px;
+	  transition: .5s;
+	  overflow: hidden;
+	  float: left;
+	  margin: 0 10px;
+	  text-align: center;
+	  color: $color_4;
+	  font-family: $font-family_1;
+	}
+  
+	.single-service p{
+	  color: $color_5;
+	  font-size: 14px;
+  }
+  
+  .single-service h3{
+	  font-size: 25px;
+	  text-transform: uppercase;
+	  letter-spacing: -0.02em;
+	  color: $color_5;
+  }
+  
+  .single-service span{
+	  position: absolute;
+	  top: 0px;
+	  left: -110%;
+	  width: 100%;
+	  height: 100%;
+	  background: rgba(0,0,0,0.7);
+	  transition: .7s;
+	  transform: skewX(10deg);
+  }
+  
+  .single-service:hover span{
+	  left: 110%;
+  }
+  
+	.social{
+	  width: 60px;
+	  height: 60px;
+	  background: $color_5;
+	  border-radius: 50px;
+	  margin: 5px auto;
+	  margin-top: 25px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+  .social i{
+	  font-size: 30px;
+	  padding: 15px;
+	  color: $color_6
+  }
+  
+  .contactForm{
+	  width: 40%; 
+	  padding: 40px;
+	  margin: 30px 0px 30px 0px;
+	  background: $color_6;
+	  color: $color_4;
+	  font-family: $font-family_1;
+  }
+  
+  .contactForm h2{
+	  font-size: 30px;
+	  color: $color_7;
+	  font-weight: 700;
+	  margin-block-start: 0em;
+  }
+  
+  .contactForm .inputBox{
+	  position: relative;
+	  width: 100%;
+	  margin-top: 10px;
+  }
+  
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea{
+	  width: 100%;
+	  padding: 5px 0;
+	  font-size: 16px;
+	  margin: 10px 0;
+	  border: none;
+	  border-bottom: 2px solid $color_7;
+	  outline: none;
+  }
+  
+  .contactForm .inputBox span{
+	  position: absolute;
+	  left: 0;
+	  padding: 5px 0;
+	  font-size: 16px;
+	  margin: 10px 0;
+	  pointer-events: none;
+	  transition: 0.5s;
+	  color: $color_8;
+  }
+  
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span{
+	  color: $color_9;
+	  font-size: 12px;
+	  transform: translateY(-20px);
+  }
+  
+  .contactForm .inputBox input[type="submit"]{
+	  width: 100px;
+	  background: #00BCD4;
+	  color: $color_6;
+	  border: none;
+	  cursor: pointer;
+	  padding: 10px;
+	  font-size: 18px;
+  }
+  
+  @media only screen and (min-width: 1241px) and (max-width: 1388px){
+	.topNavBar {
+	  gap: 10%;
+	}
+  
+	.topNavBar img{
+	  height: 91%;
+	}
+  
+	.greetings{
+	  margin-top: 7%;
+	}
+  
+	.greetings span{
+	  font-size: 58.24px;
+	}
+  
+	.contents{
+	  column-gap: 57.368px;
+	}
+  
+	.nameAndWork h3{
+	  font-size: 38.8297px;
+	}
+  
+	.nameAndWork h4{
+	  font-size: 14.56px;
+	}
+  
+	.line{
+	  width: 116.48px;
+	}
+  
+	.photo{
+	  right: 194.74px;
+	}
+  
+	.photo img{
+	  width: 351.26px;
+	  height: 351.26px;
+	  right: 136.5px;
+	}
+  
+	.quote{
+	  font-size: 18.2px;
+	}
+  
+	.socials img{
+	  width: 43.68px;
+	  height: 43.68px;
+	}
+  
+	#aboutMeName{
+	  margin-top: 40px;
+	  font-size: 58.24px;
+	  margin-bottom: -64px;
+	}
+  
+	.aboutMe{
+	  height: 682.5px;
+	  margin-bottom: -107px;
+	}
+  
+	.aboutMeContainer img{
+	  width: 232.05px;
+	}
+  
+	.image{
+	  width: 232.05px;
+	  height: 271.18px;
+	}
+  
+	.image::after{
+	  left: -30.03px;
+	  top: 27.3px;
+	}
+  
+	.aboutMeText{
+	  height: 341.25px;
+	}
+  
+	.aboutMeText h3{
+	  font-size: 20px;
+	}
+  
+	.aboutMeText li{
+	  font-size: 18px;
+	}
+  
+	#whatIDoName{
+	  margin-top: 46px;
+	}
+  
+	#whatIDoName h3{
+	  font-size: 58.24px;
+	}
+  
+	.whatIDo{
+	  margin-top: -55px;
+	  height: 502.32px;
+	}
+  
+	.whatIDoList{
+	  width: 1091.6087px;
+	  height: 204.0129px;
+	  gap: 91.91px;
+	}
+  
+	.list{
+	  width: 203.84px;
+	  height: 152.88px;
+	}
+  
+	.list img{
+	  width: 86.45px;
+	  height: 86.45px;
+	}
+  
+	.list h4{
+	  font-size: 14.56px;
+	}
+  
+	.design{
+	  width: 897.26px;
+	  height: 897.26px;
+	}
+  
+	#skillsName h3{
+	  margin-top: 65px;
+	  font-size: 58.24px;
+	}
+  
+	.skillsList{
+	  width: 642.46px;
+	  height: 378.56px;
+	}
+  
+	.list2{
+	  width: 642.46px;
+	  margin-left: 18px;
+	}
+  
+	.common-line{
+	  width: 423.15px;
+	}
+  
+	.HTML{
+	  width: 211.575px;
+	}
+  
+	.CSS{
+	  width: 253.89px;
+	}
+  
+	.JavaScript{
+	  width: 42.315px;
+	}
+  
+	.Python{
+	  width: 275.0475px;
+	}
+  
+	.C{
+	  width: 296.205px;
+	}
+  
+	.PowerPoint{
+	  width: 317.3625px;
+	}
+  
+	.Tableau{
+	  width: 148.1025px;
+	}
+  
+	#recentWorksName h3{
+	  font-size: 58.24px;
+	}
+  
+	.recentWorks{
+	  height: 910px;
+	  margin-top: -55px;
+	}
+  
+	.container{
+	  width: 728px;
+	  height: 332.15px;
+	}
+  
+	.container:first-child{
+	  margin-top: 91px;
+	}
+  
+	.container img{
+	  width: 332.15px;
+	  height: 332.15px;
+	}
+  
+	#servicesName h3{
+	  margin-top: 65px;
+	  font-size: 58.24px;
+	}
+  
+	.services{
+	  width: 1064.7px;
+	}
+  
+	.single-service{
+	  height: 291.2px;
+	}
+  
+	.single-service p{
+	  font-size: 12.74px;
+	}
+  
+	.single-service h3{
+	  font-size: 22.75px;
+	}
+  
+	.social{
+	  width: 54.6px;
+	  height: 54.6px;
+	}
+  
+	.social i{
+	  font-size: 27.3px;
+	}
+  
+	#footer{
+	  height: 414.96px;
+	}
+  
+	.footerDesign{
+	  width: 414.96px;
+	  height: 414.96px;
+	}
+  
+	.contacts{
+	  width: 227.5px;
+	  height: 227.5px;
+	}
+  
+	.list4 img{
+	  width: 24.57px;
+	  height: 24.57px;
+	}
+  
+	.list4 h3{
+	  font-size: 14.56px;
+	}
+  
+	.contactForm{
+	  padding: 36.4px;
+	  margin: 27.3px 0px 27.3px 0px;
+	}
+  
+	.contactForm h2{
+	  font-size: 27.3px;
+	}
+  
+	.contactForm .inputBox input,
+	.contactForm .inputBox textarea{
+	  font-size: 14.56px;
+	}
+  
+	.contactForm .inputBox span{
+	  padding: 4.55px 0px;
+	  margin: 9.1px 0px;
+	  font-size: 14.56px;
+	}
+  
+	.contactForm .inputBox input:focus ~ span,
+	.contactForm .inputBox input:valid ~ span,
+	.contactForm .inputBox textarea:focus ~ span,
+	.contactForm .inputBox textarea:valid ~ span{
+	  font-size: 16.38px;
+	}
+  
+	.contactForm .inputBox input[type="submit"]{
+	  font-size: 16.38px;
+	}
+  }
+  
+  @media only screen and (min-width: 1024px) and (max-width: 1240.9px) {
+	.topNavBar {
+	  gap: 10%;
+	}
+  
+	.topNavBar img{
+	  margin-left: 10%;
+	  height: 80.78%;
+	}
+  
+	.greetings{
+	  margin-top: 9%;
+	}
+  
+	.greetings span{
+	  font-size: 51.6992px;
+	}
+  
+	.contents{
+	  column-gap: 47.286px;
+	}
+  
+	.nameAndWork h3{
+	  font-size: 34.468826px;
+	}
+  
+	.nameAndWork h4{
+	  font-size: 12.9248px;
+	}
+  
+	.line{
+	  width: 103.3984px;
+	}
+  
+	.photo{
+	  right: 172.8692px;
+	}
+  
+	.photo img{
+	  width: 311.8108px;
+	  height: 311.8108px;
+	}
+  
+	.quote{
+	  font-size: 16.156px;
+	}
+  
+	.socials img{
+	  width: 38.7744px;
+	  height: 38.7744px;
+	}
+  
+	#aboutMeName{
+	  margin-top: 80px;
+	  font-size: 51.6992px;
+	  margin-bottom: -56px; 
+	}
+  
+	.aboutMe{
+	  height: 605.85px;
+	  margin-bottom: -141px;
+	}
+  
+	.aboutMeContainer img{
+	  width: 205.989px;
+	}
+  
+	.image{
+	  width: 205.989px;
+	  height: 240.7244px;
+	}
+  
+	.image::after{
+	  left: -26.6574px;
+	  top: 24.234px;
+	}
+  
+	.aboutMeText{
+	  height: 302.925px;
+	}
+  
+	.aboutMeText h3{
+	  font-size: 17.7716px;
+	}
+  
+	.aboutMeText li{
+	  font-size: 16.156px;
+	}
+  
+	#whatIDoName{
+	  margin-top: 86px;
+	}
+  
+	#whatIDoName h3{
+	  font-size: 51.6992px;
+	}
+  
+	.whatIDo{
+	  margin-top: -48px;
+	  height: 445.9056px;
+	}
+  
+	.whatIDoList{
+	  width: 969.012646px;
+	  height: 181.100682px;
+	  gap: 81.608px;
+	}
+  
+	.list{
+	  width: 180.9472px;
+	  height: 135.7104px;
+	}
+  
+	.list img{
+	  width: 76.741px;
+	  height: 76.741px;
+	}
+  
+	.list h4{
+	  font-size: 12.9248px;
+	}
+  
+	.design{
+	  width: 796.4908px;
+	  height: 796.4908px;
+	}
+  
+	#skillsName h3{
+	  margin-top: 66px;
+	  font-size: 51.6992px;
+	}
+  
+	.skillsList{
+	  width: 570.3068px;
+	  height: 336.0448px;
+	}
+  
+	.list2{
+	  width: 570.3068px;
+	  margin-left: 15px;
+	}
+  
+	.common-line{
+	  width: 378.0504px;
+	}
+  
+	.HTML{
+	  width: 189.0252px;
+	}
+  
+	.CSS{
+	  width: 226.83024px;
+	}
+  
+	.JavaScript{
+	  width: 37.80504px;
+	}
+  
+	.Python{
+	  width: 245.73276px;
+	}
+  
+	.C{
+	  width: 264.63528px;
+	}
+  
+	.PowerPoint{
+	  width: 283.5378px;
+	}
+  
+	.Tableau{
+	  width: 132.31764px;
+	}
+  
+	#recentWorksName h3{
+	  font-size: 51.6992px;
+	}
+  
+	.recentWorks{
+	  height: 820px;
+	  margin-top: -48px;
+	}
+  
+	.container{
+	  width: 646.24px;
+	  height: 294.847px;
+	}
+  
+	.container:first-child{
+	  margin-top: 80.78px;
+	}
+  
+	.container img{
+	  width: 294.847px;
+	  height: 294.847px;
+	}
+  
+	#servicesName h3{
+	  margin-top: 65px;
+	  font-size: 51.6992px;
+	}
+  
+	.services{
+	  width: 945.126px;
+	}
+  
+	.single-service{
+	  height: 258.496px;
+	}
+  
+	.single-service p{
+	  font-size: 11.3092px;
+	}
+  
+	.single-service h3{
+	  font-size: 20.195px;
+	}
+  
+	.social{
+	  width: 48.468px;
+	  height: 48.468px;
+	}
+  
+	.social i{
+	  font-size: 24.234px;
+	}
+  }
+  
+  @media only screen and (min-width: 944px) and (max-width: 1023.9px){  
+	  .topNavBar {
+		gap: 9%;
+	  }
+  
+	  .topNavBar img{
+		margin-left: 9%;
+		height: 66.6%;
+	  }
+  
+	  .greetings{
+		margin-top: 10%;
+	  }
+  
+	  .greetings span{
+		font-size: 42.624px;
+	  }
+  
+	  .contents span{
+		font-size: 13px;
+	  }
+  
+	  .nameAndWork h3{
+		font-size: 28.41822px;
+	  }
+  
+	  .nameAndWork h4{
+		font-size: 10.656px;
+	  }
+  
+	  .line{
+		width: 85.248px;
+	  }
+  
+	  .photo{
+		right: 142.524px;
+	  }
+  
+	  .photo img{
+		width: 257.076px;
+		height: 257.076px;
+	  }
+  
+	  .quote{
+		font-size: 13.32px;
+	  }
+  
+	  .socials{
+		right: -131px;
+	  }
+  
+	  .socials img{
+		width: 31.968px;
+		height: 31.968px;
+	  }
+  
+	  #aboutMeName{
+		margin-top: 132px;
+		font-size: 42.624px;
+		margin-bottom: -48px; 
+	  }
+  
+	  .aboutMe{
+		height: 499.5px;
+		margin-bottom: -181px;
+	  }
+  
+	  .aboutMeContainer img{
+		width: 169.83px;
+	  }
+  
+	  .image{
+		width: 169.83px;
+		height: 198.468px;
+	  }
+  
+	  .image::after{
+		left: -21.978px;
+		top: 19.98px;
+	  }
+  
+	  .aboutMeText{
+		height: 249.75px;
+	  }
+  
+	  .aboutMeText h3{
+		font-size: 14.652px;
+	  }
+  
+	  .aboutMeText li{
+		font-size: 13.32px;
+	  }
+  
+	  #whatIDoName{
+		margin-top: 136px;
+	  }
+  
+	  #whatIDoName h3{
+		font-size: 42.624px;
+	  }
+  
+	  .whatIDo{
+		margin-top: -40px;
+		height: 367.632px;
+	  }
+  
+	  .whatIDoList{
+		width: 798.91362px;
+		height: 149.31054px;
+		gap: 67.266px;
+	  }
+  
+	  .list{
+		width: 149.184px;
+		height: 111.888px;
+	  }
+  
+	  .list img{
+		width: 63.27px;
+		height: 63.27px;
+	  }
+  
+	  .list h4{
+		font-size: 10.656px;
+	  }
+  
+	  .design{
+		width: 656.676px;
+		height: 656.676px;
+	  }
+  
+	  #skillsName h3{
+		margin-top: 66px;
+		font-size: 42.624px;
+	  }
+  
+	  .skillsList{
+		width: 470.196px;
+		height: 277.056px;
+	  }
+  
+	  .list2{
+		width: 470.196px;
+		margin-left: 15px;
+	  }
+  
+	  .common-line{
+		width: 309.69px;
+	  }
+  
+	  .HTML{
+		width: 154.845px;
+	  }
+  
+	  .CSS{
+		width: 185.814px;
+	  }
+  
+	  .JavaScript{
+		width: 30.969px;
+	  }
+  
+	  .Python{
+		width: 201.2985px;
+	  }
+  
+	  .C{
+		width: 216.783px;
+	  }
+  
+	  .PowerPoint{
+		width: 232.2675px;
+	  }
+  
+	  .Tableau{
+		width: 108.3915px;
+	  }
+  
+	  #recentWorksName h3{
+		font-size: 42.624px;
+	  }
+  
+	  .recentWorks{
+		height: 900px;
+		margin-top: -40px;
+	  }
+  
+	  .container{
+		width: 523.8px;
+		height: 243.09px;
+	  }
+  
+	  .container:first-child{
+		margin-top: 66.6px;
+	  }
+  
+	  .container img{
+		width: 243.09px;
+		height: 243.09px;
+	  }
+  
+	  #servicesName h3{
+		margin-top: 65px;
+		font-size: 42.624px;
+	  }
+  
+	  .services{
+		width: 779.22px;
+	  }
+  
+	  .single-service{
+		height: 213.12px;
+	  }
+  
+	  .single-service p{
+		font-size: 9.324px;
+	  }
+  
+	  .single-service h3{
+		font-size: 16.65px;
+	  }
+  
+	  .social{
+		width: 39.96px;
+		height: 39.96px;
+	  }
+  
+	  .social i{
+		font-size: 19.98px;
+	  }
+  
+	  #footer{
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 975px;
+	  }
+  
+	  .contactForm{
+		margin-top: 50px;
+	  }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 943.9px){  
+	.topNavBar {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.topNavBar img{
+	  margin-left: 0%;
+	  height: 61.43%;
+	  width: 50.9869px;
+	}
+  
+	.greetings{
+	  margin-top: 15%;
+	}
+  
+	.greetings span{
+	  font-size: 39.3152px;
+	}
+  
+	.contents{
+	  padding: 0px;
+	}
+  
+	.contents span{
+	  font-size: 13px;
+	}
+  
+	.nameAndWork h3{
+	  font-size: 26.212181px;
+	}
+  
+	.nameAndWork h4{
+	  font-size: 9.8288px;
+	}
+  
+	.line{
+	  width: 78.6304px;
+	}
+  
+	.photo{
+	  right: 131.4602px;
+	}
+  
+	@media only screen and (min-width: 925.6px) and (max-width: 943.5px){
+	  .photo{
+		top: 52px;
+	  }
+	}
+  
+	@media only screen and (min-width: 908.2px) and (max-width: 925.5px){
+	  .photo{
+		top: 39px;
+	  }
+	}
+  
+	@media only screen and (min-width: 890.8px) and (max-width: 908.1px){
+	  .photo{
+		top: 26px;
+	  }
+	}
+  
+	@media only screen and (min-width: 873.4px) and (max-width: 890.7px){
+	  .photo{
+		top: 13px;
+	  }
+	}
+  
+	@media only screen and (min-width: 856px) and (max-width: 873.3px){
+	  .photo{
+		top: 0px;
+	  }
+	}
+  
+	@media only screen and (min-width: 838.6px) and (max-width: 855.9px){
+	  .photo{
+		top: -13px;
+	  }
+	}
+  
+	@media only screen and (min-width: 768px) and (max-width: 838.5px){
+	  .photo{
+		top: -26px;
+	  }
+	}
+  
+	.photo img{
+	  width: 237.1198px;
+	  height: 237.1198px;
+	}
+  
+	.quote{
+	  font-size: 12.286px;
+	}
+  
+	.socials{
+	  right: -131px;
+	}
+  
+	.socials img{
+	  width: 29.4864px;
+	  height: 29.4864px;
+	}
+  
+	#aboutMeName{
+	  margin-top: 140px;
+	  font-size: 39.3152px;
+	  margin-bottom: -43px; 
+	}
+  
+	.aboutMe{
+	  height: 460.725px;
+	  margin-bottom: -197px;
+	}
+  
+	.aboutMeContainer img{
+	  width: 156.6465px;
+	  border: 8px solid #F3E4D5;
+	}
+  
+	.image{
+	  width: 156.6465px;
+	  height: 183.0614px;
+	}
+  
+	.image::after{
+	  left: -20.2719px;
+	  top: 18.429px;
+	}
+  
+	.aboutMeText{
+	  height: 230.3625px;
+	}
+  
+	.aboutMeText h3{
+	  font-size: 13.5146px;
+	}
+  
+	.aboutMeText li{
+	  font-size: 12.286px;
+	}
+  
+	#whatIDoName{
+	  margin-top: 155px;
+	}
+  
+	#whatIDoName h3{
+	  font-size: 39.3152px;
+	}
+  
+	.whatIDo{
+	  margin-top: -37px;
+	  height: 339.0936px;
+	}
+  
+	.whatIDoList{
+	  width: 736.895851px;
+	  height: 137.719917px;
+	  gap: 62.0443px;
+	}
+  
+	.list{
+	  width: 137.6032px;
+	  height: 103.2024px;
+	}
+  
+	.list img{
+	  width: 58.3585px;
+	  height: 58.3585px;
+	}
+  
+	.list h4{
+	  font-size: 9.8288px;
+	}
+  
+	.design{
+	  width: 605.6998px;
+	  height: 605.6998px;
+	}
+  
+	#skillsName h3{
+	  margin-top: 66px;
+	  font-size: 39.3152px;
+	}
+  
+	.skillsList{
+	  width: 433.6958px;
+	  height: 255.5488px;
+	}
+  
+	.list2{
+	  width: 433.6958px;
+	  margin-left: 15px;
+	}
+  
+	.common-line{
+	  width: 285.6495px;
+	}
+  
+	.HTML{
+	  width: 142.82475px;
+	}
+  
+	.CSS{
+	  width: 171.3897px;
+	}
+  
+	.JavaScript{
+	  width: 28.56495px;
+	}
+  
+	.Python{
+	  width: 185.672175px;
+	}
+  
+	.C{
+	  width: 199.95465px;
+	}
+  
+	.PowerPoint{
+	  width: 214.237125px;
+	}
+  
+	.Tableau{
+	  width: 99.977325px;
+	}
+  
+	#recentWorksName h3{
+	  font-size: 39.3152px;
+	}
+  
+	.recentWorks{
+	  height: 900px;
+	  margin-top: -37px;
+	}
+  
+	.container{
+	  width: 491.44px;
+	  height: 224.2195px;
+	}
+  
+	.container:first-child{
+	  margin-top: 61.43px;
+	}
+  
+	.container img{
+	  width: 224.2195px;
+	  height: 224.2195px;
+	}
+  
+	#servicesName h3{
+	  margin-top: 65px;
+	  font-size: 39.3152px;
+	}
+  
+	.services{
+	  width: 718.731px;
+	}
+  
+	.single-service{
+	  height: 196.576px;
+	}
+  
+	.single-service p{
+	  font-size: 8.6px;
+	}
+  
+	.single-service h3{
+	  font-size: 15.3575px;
+	}
+  
+	.social{
+	  width: 36.858px;
+	  height: 36.858px;
+	}
+  
+	.social i{
+	  font-size: 18.429px;
+	}
+  
+	#footer{
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+	  height: 975px;
+	}
+  
+	.contactForm{
+	  margin-top: 50px;
+	}
+  }
+  
+  @media only screen and (min-width: 425px) and (max-width: 767.9px){
+	.topNavBar {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.topNavBar img{
+	  margin-left: 0%;
+	  height: 50%;
+	  width: 41.5px;
+	}
+  
+	.greetings{
+	  margin-top: 18%;
+	}
+  
+	.greetings span{
+	  font-size: 32px;
+	}
+  
+	.contents{
+	  padding: 0px;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+  
+	.contents span{
+	  font-size: 13px;
+	}
+  
+	.nameAndWork h3{
+	  font-size: 21.335px;
+	}
+  
+	.nameAndWork h4{
+	  font-size: 8px;
+	  margin-left: 0px;
+	}
+  
+	.nameAndWork .line{
+	  margin-left: 0px;
+	  height: -12px;
+	}
+  
+	.line{
+	  width: 64px;
+	}
+  
+	.photo{
+	  right: 70px;
+	  top: 70px;
+	}
+  
+	.photo img{
+	  width: 150px;
+	  height: 150px;
+	}
+  
+	.nameAndWork{
+	  margin-top: 37.5px;
+	}
+  
+	.quote{
+	  font-size: 10px;
+	  flex-wrap: wrap;
+	  margin-top: 55px;
+	}
+  
+	.socials{
+	  right: -131px;
+	}
+  
+	.socials span{
+	  font-size: 12px;
+	}
+  
+	.socials img{
+	  width: 24px;
+	  height: 24px;
+	}
+  
+	#aboutMeName{
+	  margin-top: 140px;
+	  font-size: 39.3152px;
+	  margin-bottom: -43px; 
+	}
+  
+	.aboutMe{
+	  height: 700px;
+	  margin-bottom: -197px;
+	  flex-direction: column;
+	  justify-content: space-around;
+	}
+  
+	.aboutMeContainer{
+	  position: relative;
+	  left: -40.2719px;
+	  top: 18.429px;
+	}
+  
+	.aboutMeContainer img{
+	  width: 156.6465px;
+	  border: 8px solid #F3E4D5;
+	}
+  
+	.image{
+	  width: 156.6465px;
+	  height: 183.0614px;
+	}
+  
+	.image::after{
+	  left: -20.2719px;
+	  top: 18.429px;
+	}
+  
+	.aboutMeText{
+	  height: 230.0625px;
+	  width: 250px;
+	}
+  
+	.aboutMeText h3{
+	  font-size: 11.5px;
+	}
+  
+	.aboutMeText li{
+	  font-size: 9.5px;
+	}
+  
+	#whatIDoName{
+	  margin-top: 155px;
+	}
+  
+	#whatIDoName h3{
+	  font-size: 32px;
+	}
+  
+	.whatIDo{
+	  margin-top: -30px;
+	  height: 1100px;
+	}
+  
+	.whatIDoList{
+		align-items: center;
+				flex-direction: column;
+				width: 798.91362px;
+				height: 149.31054px;
+				gap: 67.266px;
+				justify-content: center;
+			  }
+		  
+			  .list{
+				width: 149.184px;
+				height: 111.888px;
+			  }
+		  
+			  .list img{
+				width: 63.27px;
+				height: 63.27px;
+			  }
+		  
+			  .list h4{
+				font-size: 10.656px;
+			  }
+  
+	.design{
+	  width: 493px;
+	  height: 493px;
+	  right: 120px;
+	}
+  
+	#skillsName h3{
+	  margin-top: 66px;
+	  font-size: 32px;
+	}
+  
+	.skillsList{
+	  width: 353px;
+	  height: 208px;
+	}
+  
+	.list2{
+	  width: 353px;
+	}
+  
+	.common-line{
+	  width: 232.5px;
+	  margin-left: 125px;
+	}
+  
+	.HTML{
+	  width: 116.5px;
+	}
+  
+	.CSS{
+	  width: 139.5px;
+	}
+  
+	.JavaScript{
+	  width: 23.25px;
+	}
+  
+	.Python{
+	  width: 151.125px;
+	}
+  
+	.C{
+	  width: 162.75px;
+	}
+  
+	.PowerPoint{
+	  width: 174.375px;
+	}
+  
+	.Tableau{
+	  width: 81.375px;
+	}
+  
+	#recentWorksName h3{
+	  font-size: 32px;
+	  margin-top: 20px;
+	}
+  
+	.recentWorks{
+	  height: 550px;
+	  margin-top: -30px;
+	}
+  
+	.container{
+	  width: 400px;
+	  height: 182.5px;
+	}
+  
+	.container:first-child{
+	  margin-top: 50px;
+	}
+  
+	.container:nth-child(2){
+	  margin-top: -50px;
+	}
+  
+	.container img{
+	  width: 182.5px;
+	  height: 182.5px;
+	}
+  
+	#servicesName h3{
+	  margin-top: 65px;
+	  font-size: 32px;
+	}
+  
+	.services{
+		width: 779.22px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 50px;
+	  }
+  
+	  .single-service{
+		height: 200px;
+		width: 300px;
+	  }
+  
+	  .single-service p{
+		font-size: 9.324px;
+	  }
+  
+	  .single-service h3{
+		font-size: 16.65px;
+	  }	
+  
+	.social{
+	  width: 30px;
+	  height: 30px;
+	}
+  
+	.social i{
+	  font-size: 15px;
+	}
+  
+	#footer{
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+	  height: 975px;
+	}
+  
+	.footerDesign{
+	  width: 410.4px;
+	  height: 410.4px;
+	}
+  
+	.list4 img{
+	  width: 24.3px;
+	  height: 24.3px;
+	}
+  
+	.list4 h3{
+	  font-size: 14px;
+	}
+  
+	.contactForm{
+	  width: 60%;
+	  margin-top: 50px;
+	}
+  
+	.single-service span{
+	  left: -120%;
+	}
+  
+	.single-service:hover span{
+	  left: 120%;
+  }
+  }
+  
+  @media only screen and (max-width: 425px){
+	.topNavBar {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.topNavBar img{
+	  margin-left: 0%;
+	  height: 50%;
+	  width: 41.5px;
+	}
+  
+	.greetings{
+	  margin-top: 30%;
+	}
+  
+	.greetings span{
+	  font-size: 32px;
+	}
+  
+	.contents{
+	  padding: 0px;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  column-gap: 50px;
+	}
+  
+	.contents span{
+	  font-size: 13px;
+	}
+  
+	.nameAndWork h3{
+	  font-size: 21.335px;
+	}
+  
+	.nameAndWork h4{
+	  font-size: 8px;
+	  margin-left: 0px;
+	}
+  
+	.nameAndWork .line{
+	  margin-left: 0px;
+	  height: -12px;
+	}
+  
+	.line{
+	  width: 64px;
+	}
+  
+	.photo{
+	  right: 55px;
+	  top: 70px;
+	}
+  
+	.photo img{
+	  width: 150px;
+	  height: 150px;
+	}
+  
+	.nameAndWork{
+	  margin-top: 37.5px;
+	}
+  
+	.quote{
+	  font-size: 10px;
+	  flex-wrap: wrap;
+	  margin-top: 65px;
+	}
+  
+	.socials{
+	  right: -131px;
+	}
+  
+	.socials span{
+	  font-size: 12px;
+	}
+  
+	.socials img{
+	  width: 24px;
+	  height: 24px;
+	}
+  
+	#aboutMeName{
+	  margin-top: 140px;
+	  font-size: 39.3152px;
+	  margin-bottom: -43px; 
+	}
+  
+	.aboutMe{
+	  height: 750px;
+	  margin-bottom: -151px;
+	  flex-direction: column;
+	}
+  
+	.aboutMeContainer{
+	  position: relative;
+	  left: -40.2719px;
+	  top: 18.429px;
+	  margin-bottom: 100px;
+	}
+  
+	.aboutMeContainer img{
+	  width: 156.6465px;
+	  border: 8px solid #F3E4D5;
+	}
+  
+	.image{
+	  width: 156.6465px;
+	  height: 183.0614px;
+	}
+  
+	.image::after{
+	  left: -20.2719px;
+	  top: 18.429px;
+	}
+  
+	.aboutMeText{
+	  height: 230.0625px;
+	  width: 250px;
+	}
+  
+	.aboutMeText h3{
+	  font-size: 11px;
+	}
+  
+	.aboutMeText li{
+	  font-size: 9px;
+	}
+  
+	#whatIDoName{
+	  margin-top: 118px;
+	}
+  
+	#whatIDoName h3{
+	  font-size: 32px;
+	}
+  
+	.whatIDo{
+		margin-top: -30px;
+		height: 1100px;
+	  }
+	
+	  .whatIDoList{
+		  align-items: center;
+				  flex-direction: column;
+				  width: 798.91362px;
+				  height: 149.31054px;
+				  gap: 67.266px;
+				  justify-content: center;
+				}
+			
+				.list{
+				  width: 149.184px;
+				  height: 111.888px;
+				}
+			
+				.list img{
+				  width: 63.27px;
+				  height: 63.27px;
+				}
+			
+				.list h4{
+				  font-size: 10.656px;
+				}
+  
+	.design{
+	  width: 493px;
+	  height: 493px;
+	  right: 120px;
+	}
+  
+	#skillsName h3{
+	  margin-top: 67px;
+	  font-size: 32px;
+	}
+  
+	.skillsList{
+	  width: 353px;
+	  height: 208px;
+	}
+  
+	.list2{
+	  width: 353px;
+	}
+  
+	.common-line{
+	  width: 232.5px;
+	  margin-left: 125px;
+	  height: 18px;
+	}
+  
+	.HTML{
+	  width: 116.5px;
+	}
+  
+	.CSS{
+	  width: 139.5px;
+	}
+  
+	.JavaScript{
+	  width: 23.25px;
+	}
+  
+	.Python{
+	  width: 151.125px;
+	}
+  
+	.C{
+	  width: 162.75px;
+	}
+  
+	.PowerPoint{
+	  width: 174.375px;
+	}
+  
+	.Tableau{
+	  width: 81.375px;
+	}
+  
+	#recentWorksName h3{
+	  margin-top: 20px;
+	  font-size: 32px;
+	}
+  
+	.recentWorks{
+	  height: 510px;
+	  margin-top: -30px;
+	}
+  
+	.container{
+	  width: 400px;
+	  height: 182.5px;
+	  justify-content: space-evenly;
+	}
+  
+	.container:first-child{
+	  margin-top: 50px;
+	}
+  
+	.container:nth-child(2){
+	  margin-top: -50px;
+	}
+  
+	.container img{
+	  width: 182.5px;
+	  height: 182.5px;
+	}
+  
+	#servicesName h3{
+	  margin-top: 65px;
+	  font-size: 32px;
+	}
+  
+	.services{
+		width: 779.22px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 50px;
+	  }
+  
+	  .single-service{
+		height: 200px;
+		width: 275px;
+	  }
+  
+	  .single-service p{
+		font-size: 9.324px;
+	  }
+  
+	  .single-service h3{
+		font-size: 16.65px;
+	  }
+  
+	.social{
+	  width: 30px;
+	  height: 30px;
+	}
+  
+	.social i{
+	  font-size: 15px;
+	}
+  
+	#footer{
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+	  height: 975px;
+	}
+  
+	.footerDesign{
+	  width: 387.6px;
+	  height: 387.6px;
+	}
+  
+	.list4 img{
+	  width: 24.3px;
+	  height: 24.3px;
+	}
+  
+	.list4 h3{
+	  font-size: 14.4px;
+	}
+  
+	.contactForm{
+	  width: 60%;
+	  margin-top: 50px;
+	  padding: 40px;
+	  margin: 30px 0px 30px 0px;
+  }
+  }
+
+  @media only screen and (max-width: 856px){
+	  .recentWorks {
+		height: 2000px;
+		flex-direction: column;
+	  }
+	  .recentWorks .worksItem {
+		width: 90vw;
+		height: 900px;
+	  }
+	  .recentWorks .worksItem .worksImg {
+		width: 70vw;
+		height: 90vh;
+	  }
+	  .recentWorks .worksItem .worksImg img:hover {
+		transform: scale(1.2);
+		transition: 0.5s;
+	  }
+	  .recentWorks .worksItem .worksInfo {
+		padding: 2rem;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(2) {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+		padding: 0.5rem 1rem;
+		border: 1px solid #00ADB5;
+		border-radius: 5px;
+		color: #00ADB5;
+		font-size: 1rem;
+	  }
+	  .recentWorks .worksItem .worksInfo a:nth-child(2):hover {
+		background-color: #00ADB5;
+		color: #EEEEEE;
+		transition: all 0.3s ease-in-out;
+		font-size: 1rem;
+	  }
+	}
+
+	@media only screen and(max-width: 389.9px){
+		.photo{
+			right: 67.5px;
+			top: 70px;
+		  }
+		
+		  .photo img{
+			width: 125px;
+			height: 125px;
+		  }
+	}
+
+	@media only screen and(max-width: 365.9px){
+		.photo{
+			right: 55px;
+			top: 70px;
+		  }
+		
+		  .photo img{
+			width: 100px;
+			height: 100px;
+		  }
+	}
+  
+  
